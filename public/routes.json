@@ -1,0 +1,39 @@
+{
+    "routes": [
+      {
+        "route": "/admin/*",
+        "allowedRoles": ["admin"]
+      },
+      {
+        "route": "/login",
+        "serve": "/.auth/login/github"
+      },
+      {
+        "route": "/.auth/login/twitter",
+        "statusCode": "404"
+      },
+      {
+        "route": "/logout",
+        "serve": "/.auth/logout"
+      },
+      {
+        "route": "/calendar/*",
+        "serve": "/calendar.html"
+      },
+      {
+        "route": "/specials",
+        "serve": "/deals",
+        "statusCode": 301
+      }
+    ],
+    "platformErrorOverrides": [
+      {
+        "errorType": "NotFound",
+        "serve": "/custom-404.html"
+      },
+      {
+        "errorType": "Unauthenticated",
+        "serve": "/login"
+      }
+    ]
+  }
