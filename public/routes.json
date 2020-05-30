@@ -6,11 +6,7 @@
       },
       {
         "route": "/login",
-        "serve": "/.auth/login/github"
-      },
-      {
-        "route": "/.auth/login/twitter",
-        "statusCode": "404"
+        "serve": "/.auth/login/twitter"
       },
       {
         "route": "/logout",

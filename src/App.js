@@ -28,6 +28,8 @@ export default function App() {
           <Route path="/admin">
             <Admin />
           </Route>
+          <a href="/login">login
+          </a>
           <Route path="/">
             <Home />
           </Route>
